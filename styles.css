@@ -232,6 +232,7 @@ main > section:nth-child(3), section:nth-child(5){
 main > section:nth-child(7){
     margin:2rem;
     padding:2rem;
+    font-size:1.125rem;
     color:var(--text-primary);
     background:var(--card-bg);
     border-radius:0.5rem;
