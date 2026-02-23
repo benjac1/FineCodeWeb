@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy"
+        content="
+        default-src 'self';
+        img-src 'self' data:;
+        style-src 'self' https://cdnjs.cloudflare.com;
+        font-src 'self' https://cdnjs.cloudflare.com;
+        script-src 'self';
+        base-uri 'self';
+        frame-ancestors 'none';
+    ">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
@@ -10,7 +24,7 @@
 </head>
 <body>
     <header>
-        <nav aria-label="Navegación">
+        <nav aria-label="Navegación principal">
             <a href="index.html" aria-label="Inicio">
                 <img src="logo-finecode.png" alt="Logo de FineCode">
                 <span>FineCode</span>
@@ -22,39 +36,39 @@
         </nav>
     </header>
     <main>
-        <section aria-labelledby="Hero">
+        <section class="hero">
             <img src="logo-finecode.png" alt="FineCode Logo"  fetchpriority="high">
-            <h1 id="Hero">Desarrollamos la web que tu negocio merece</h1>
+            <h1>Desarrollamos la web que tu negocio merece</h1>
             <p>En <strong>FineCode</strong> creamos sitios web rápidos, escalables y optimizados, diseñados para convertir visitas en clientes reales.</p>
             <p>Código fino, estructura sólida y una experiencia que se siente profesional desde el primer segundo.</p>
-            <button><i class="fas fa-paper-plane" style="color:#fff;margin-right:.7rem;"></i>Contáctenos</button>
+            <a href="#contacto" role="button"><i class="fas fa-paper-plane button-icon"></i>Contáctenos</a>
         </section>
-        <h2><i class="fas fa-star"></i>Proyectos Destacados</h2>
-        <section>
+        <h2 id="proyectos-title"><i class="fas fa-star" aria-hidden="true"></i>Proyectos Destacados</h2>
+        <section class="proyectos" aria-labelledby="proyectos-title">
             <article>
                 <picture>
-                    <img src="logo-finecode.png" alt="Simple vista proyecto">
+                    <img src="logo-finecode.png" alt="Simple vista proyecto" loading="lazy" decoding="async">
                 </picture>
                 <h3>Proyecto 1</h3>
                 <p>Descripción</p>
             </article>
             <article>
                 <picture>
-                    <img src="logo-finecode.png" alt="Simple vista proyecto">
+                    <img src="logo-finecode.png" alt="Simple vista proyecto" loading="lazy" decoding="async">
                 </picture>
                 <h3>Proyecto 2</h3>
                 <p>Descripción</p>
             </article>
             <article>
                 <picture>
-                    <img src="logo-finecode.png" alt="Simple vista proyecto">
+                    <img src="logo-finecode.png" alt="Simple vista proyecto" loading="lazy" decoding="async">
                 </picture>
                 <h3>Proyecto 3</h3>
                 <p>Descripción</p>
             </article>
         </section>
-        <h2><i class="fas fa-code"></i>Nuestros servicios</h2>
-        <section>
+        <h2 id="servicios-title"><i class="fas fa-code" aria-hidden="true"></i>Nuestros servicios</h2>
+        <section class="servicios" aria-labelledby="servicios-title">
             <article>
                 <h3><i class="fas fa-laptop-code"></i>Desarrollo Web Personalizado</h3>
                 <p>Ofrecemos soluciones a medida para crear sitios web que reflejen la identidad y objetivos de tu negocio.</p>
@@ -68,11 +82,15 @@
                 <p>Proporcionamos servicios continuos de mantenimiento y soporte para asegurar que tu sitio web funcione sin problemas.</p>
             </article>
         </section>
-        <h2><i class="fas fa-rocket"></i>Nuestra misión</h2>
-        <section>
+        <h2 id="mision-title"><i class="fas fa-rocket" aria-hidden="true"></i>Nuestra misión</h2>
+        <section class="mision" aria-labelledby="mision-title">
             <article>
                 <p>En FineCode creemos que cada negocio merece una presencia digital excepcional. Combinamos tecnología de vanguardia con diseño cuidadosamente elaborado para crear experiencias web que no solo se ven bien, sino que también funcionan perfectamente.</p>
             </article>
+        </section>
+        <section class="cta">
+            <h3>¿Hablamos?</h3>
+            <p>Contanos tu idea de presencia digital en sitio web y llevémosla al siguiente nivel con código fino</p>
         </section>
     </main>
     <footer>
